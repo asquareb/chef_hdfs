@@ -1,8 +1,8 @@
 #
-# Cookbook Name:: hdfs
+# Cookbook Name:: chef_hdfs
 # Recipe:: default
 #
-# Chef HWRP provider for hdfs directory resource
+# Default recipe for chef_hdfs cookbook
 #
 # Author: Biju Nair
 # Github: https://github.com/bijugs

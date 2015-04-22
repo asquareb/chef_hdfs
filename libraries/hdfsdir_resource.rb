@@ -28,20 +28,25 @@ class Chef
       #
       def initialize(name, run_context=nil)
         super
+
         #
         # Set the resource name
         #
         @resource_name = :hdfsdir
+
         #
         # Allowed actions in this resource
         #
-        @allowed_actions = [:create, :delete, :chown, :chmod, :rename, :chgrp]
+        @allowed_actions = [:create, :delete, :chown, :chmod, :rename, :chgrp, :nothing]
+
         #
         # Default action if none specified when using the resource
         #
         @action = :create
+
         #
         # Set default values for resource attributes
+        #
         @path = name
         @namenode = nil
         @nnport = nil

@@ -33,6 +33,7 @@ class Chef
       #
       def load_current_resource
         require 'webhdfs'
+
         #
         # Not taking the typical approach of creating a current_resource will make
         # this LWRP usable with any cookbook without changes. We are creating 
@@ -54,12 +55,14 @@ class Chef
         @tgroup = new_resource.tgroup
         @tuser = new_resource.tuser
       end
+
       #
       # Method to check whether the namenode provided is valid
       #
       def validnn?()
         return dir_exists?("/") ? true : false
       end
+
       #
       # Method to check whether the dir currently exists
       #
@@ -76,10 +79,6 @@ class Chef
         end 
       end
 
-      def action_test
-        Chef::Log::debug("This is a test HWRP")
-        puts "Heloooooo !!!!!!!"
-      end
       #
       # Action to create a directory in HDFS
       #
@@ -93,6 +92,7 @@ class Chef
           new_resource.updated_by_last_action(true)
         end
       end
+
       #
       # Action to delete a directory in HDFS
       #
@@ -106,6 +106,7 @@ class Chef
           new_resource.updated_by_last_action(true)
         end
       end
+
       #
       # Action to change owner:group of a directory in HDFS
       #
@@ -124,6 +125,7 @@ class Chef
           new_resource.updated_by_last_action(true)
         end
       end
+
       #
       # Action to change mode of a directory in HDFS
       #
@@ -139,6 +141,7 @@ class Chef
           new_resource.updated_by_last_action(true)
         end
       end
+
       #
       # Action to change group of a directory in HDFS
       #
@@ -154,6 +157,7 @@ class Chef
           new_resource.updated_by_last_action(true)
         end
       end
+
       #
       # Action to rename a directory in HDFS
       #

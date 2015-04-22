@@ -1,7 +1,7 @@
-name             'hdfs'
-maintainer       'The Authors'
-maintainer_email 'you@example.com'
-license          'all_rights'
+name             'chef_hdfs'
+maintainer       'Biju Nair'
+maintainer_email 'gs.biju @ gmail.com
+license          'Apache 2'
 description      'Installs/Configures hdfs'
 long_description 'Installs/Configures hdfs'
 version          '0.1.0'
